@@ -1,0 +1,258 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+}
+
+.App-logo {
+  height: 40vmin;
+  margin-bottom: 80px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 15s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: auto;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #282c34;
+  text-align: center;
+}
+
+.MLB-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: auto;
+}
+
+.body {
+  background-color: #282c34;
+  display: inline-block;
+}
+
+.App-link {
+  color: hwb(120 38% 2%);
+}
+
+.space {
+  margin: 15px;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 40px 10px;
+  cursor: pointer;
+}
+
+.box {
+  background-color: rgba(39, 123, 33, 0.669);
+  color: white;
+  height: 150px;
+  width: 250px;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #282c34;
+}
+
+.topLeftLogo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  transition: height 0.5s, width 0.5s;
+  transition-delay: 0s, 0.75s;
+  overflow: hidden;
+}
+
+.navigation {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: 60px;
+  color: white;
+  background: rgba(39, 123, 33, 0.669);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  transition: height 0.5s, width 0.5s;
+  transition-delay: 0s, 0.75s;
+  overflow: hidden;
+}
+
+.navigation.active {
+  width: 300px;
+  height: 250px;
+  transition: width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.75s;
+}
+
+.navigation .userBx {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: rgba(231, 103, 40, 0.669);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.navigation.active .userBx {
+  width: calc(100% - 60px);
+  transition-delay: 0s;
+}
+
+.navigation .userBx .username {
+  width: 100px;
+  color: white;
+  font-size: 1em;
+}
+
+.navigation .userBx .imgBx {
+  position: relative;
+  min-height: 60px;
+  height: 60px;
+  background: #000;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  overflow: hidden;
+
+}
+
+.navigation .userBx .imgBx img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navigation .menuToggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation .menuToggle::before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: white;
+  transform: translateY(-10px);
+  box-shadow: 0 10px white;
+  transition: 0.5s;
+}
+
+.navigation .menuToggle::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: white;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+.navigation.active .menuToggle::before {
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 white;
+}
+
+.navigation.active .menuToggle::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.menu {
+
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  margin: 20px 0;
+}
+
+.menu li a:hover {
+  color: rgba(231, 104, 40, 0.83);
+  cursor: pointer;
+}
+
+.menu li a ion-icon {
+  font-size: 1.5em;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
