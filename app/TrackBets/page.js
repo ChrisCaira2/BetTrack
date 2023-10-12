@@ -63,7 +63,7 @@ export default function TrackBets() {
                 className='betSlip'
             >
                 <div>
-                    <label className="label">Sport: </label>
+                    <label className="label">League: </label>
                     <input
                         onChange={(e) => setSport(e.target.value)}
                         className='form'
