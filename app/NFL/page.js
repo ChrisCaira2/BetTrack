@@ -60,7 +60,7 @@ function NFL() {
     //${currentDate}
     const fetchMe = () => {
 
-        fetch(`https://tank01-nfl-live-in-game-real-time-statistics-nfl.p.rapidapi.com/getNFLBettingOdds?gameDate=20231008`, {
+        fetch(`https://tank01-nfl-live-in-game-real-time-statistics-nfl.p.rapidapi.com/getNFLBettingOdds?gameDate=${currentDate}`, {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': '9441af4572msh072585be2e742b1p199714jsnc836d63d57d2',

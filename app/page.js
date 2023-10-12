@@ -19,7 +19,7 @@ function App() {
           Welcome to Bet Track!
         </p>
 
-        <button onClick={() => router.push('/SignIn')} className='button'>Sign In </button>
+        {/* <button onClick={() => router.push('/SignIn')} className='button'>Sign In </button> */}
         <button onClick={() => router.push('/Dashboard')} className='button'>Continue </button>
 
 

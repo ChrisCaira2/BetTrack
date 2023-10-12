@@ -16,7 +16,7 @@ function Dashboard() {
 
                 <button onClick={() => router.push('/NFL')} className='button'>NFL </button>
                 <button onClick={() => router.push('/MLB')} className='button'>MLB </button>
-                <button onClick={() => router.push('/NBA')} className='button'>NBA </button>
+                <button onClick={() => router.push('/TrackBets')} className='button'>Track Bets </button>
 
 
             </header>
