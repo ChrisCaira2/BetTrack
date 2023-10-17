@@ -16,19 +16,39 @@
 }
 
 .betSlip {
+  display: grid;
   justify-content: right;
+  position: fixed;
+  bottom: 50px;
+  right: 200px;
+  padding: 15px;
+  border: 2px solid white;
+
+}
+
+.displayBets {
+  display: grid;
+  overflow: auto;
+  position: fixed;
+  bottom: 50px;
+  left: 200px;
+  height: 580px;
+  width: 546px;
+  padding: 15px;
+  border: 2px solid white;
 }
 
 .label {
   padding: 5px;
+  font-size: 26px;
 }
 
 .form {
   color: black;
-  width: 275px;
-  height: 35px;
+  font-size: 24px;
+  width: 450px;
+  height: 55px;
   padding: 5px;
-  justify-content: right;
 }
 
 .App-header {
@@ -85,6 +105,10 @@
   border-radius: 5px;
   margin: 40px 10px;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(39, 123, 33, 0.669);
 }
 
 .box {
