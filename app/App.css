@@ -17,9 +17,10 @@
 
 .betSlip {
   display: grid;
-  justify-content: right;
+  justify-content: center;
   position: fixed;
-  bottom: 50px;
+  width: 600px;
+  bottom: 0px;
   right: 200px;
   padding: 15px;
   border: 2px solid white;
@@ -30,10 +31,10 @@
   display: grid;
   overflow: auto;
   position: fixed;
-  bottom: 50px;
+  bottom: 0px;
   left: 200px;
-  height: 580px;
-  width: 546px;
+  height: 600px;
+  width: 600px;
   padding: 15px;
   border: 2px solid white;
 }
@@ -47,7 +48,7 @@
   color: black;
   font-size: 24px;
   width: 450px;
-  height: 55px;
+  height: 38px;
   padding: 5px;
 }
 

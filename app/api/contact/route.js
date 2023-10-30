@@ -4,11 +4,11 @@ import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 
 export async function POST(req) {
-    const { sport, team, betType, odds } = await req.json();
+    const { sport, team, betType, odds, wager } = await req.json();
 
     try {
         await connectDB();
-        await Slip.create({ sport, team, betType, odds });
+        await Slip.create({ sport, team, betType, odds, wager });
 
         return NextResponse.json({
             msg: ["Bet sent successfully"],
@@ -26,4 +26,14 @@ export async function POST(req) {
             return NextResponse.json({ msg: ["Unable to send message."] });
         }
     }
+}
+
+export async function GET() {
+    try {
+        await connectDB();
+        await Slip.collection.find({ sport, team, betType, odds, wager })
+    } catch (error) {
+        console.log('no')
+    }
+
 }

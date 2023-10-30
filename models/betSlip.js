@@ -6,7 +6,8 @@ const betSlip = new Schema({
         required: [true, "Sport is required."],
         trim: true,
         maxLength: [7, "Sport must be lesser than 7 characters"],
-    }, team: {
+    },
+    team: {
         type: String,
         required: [true, "Team is required."],
         trim: true,
@@ -23,6 +24,11 @@ const betSlip = new Schema({
         type: String,
         required: [true, "Odds are required."],
         maxLength: [7, "Odds must be lesser than 7 characters"],
+    },
+    wager: {
+        type: String,
+        required: [true, "Wager is required."],
+        maxLength: [7, "Wager must be lesser than 7 characters"],
     },
 
     date: {
